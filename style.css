@@ -1,0 +1,172 @@
+/*
+This is a good layout for a mobile-first CSS template.
+Following this flow will minimize the number of styles you need to write and will ensure you are thinking, designing and developing mobile-first.
+Most of your styles get written like standard CSS, but for your mobile presentation. Generally speaking, a good mobile presention will stretch out nicely for larger screens.
+Sometimes, when we stretch out to larger screens, we need to make minor tweaks for the larger devices -- you can make these tweaks in the tablet media query, or if the issue exists on desktop only, the desktop media query.
+You will find this is far easier than the opposite task of using CSS to cram your desktop experience into a mobile device.
+*/
+/*********************************************************************
+ LOADS IN A NICE RESET TO ENSURE ALL BROWSERS HAVE THE SAME BASE STYLES
+*********************************************************************/
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css');
+
+/*********************************************************************
+  YOUR MOBILE/BASE STYLES GO HERE
+*********************************************************************/
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    /* Sets default font-size to 16px, ensuring 1em = 16px; */
+    font-size: 16px;
+}
+
+/** RESPONSIVE IMAGES */
+figure,
+img {
+    /* Sets image width to match parent */
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+p {
+    line-height: 1.2 em;
+}
+
+/** Caption styles */
+.caption,
+figcaption {
+    font-size: 0.9rem;
+    color: #8e8a8a;
+    padding: 5px 0;
+}
+
+/** BASE CLASSES */
+.container {
+    width: 100%;
+    max-width: 800px;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+.container.image {
+    max-width: 1200px;
+    padding: 0;
+}
+
+.container.image .caption,
+.container.image figcaption {
+    padding: 5px 10px;
+}
+
+.calc-container {
+    background-color: #f7f7f7;
+    padding: 22px 0;
+}
+
+.calculator .row .item img {
+    margin: 5px auto;
+}
+
+.qty_container {
+    display: flex;
+}
+
+.qty_container>div {
+    flex-basis: 90%;
+}
+
+.qty_container input {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 7px;
+    border: 0;
+}
+
+.qty_container .unit {
+    flex-basis: 10%;
+    background-color: #CCC;
+    padding: 6px 0;
+    text-align: center;
+}
+
+.aetna,
+.uhc,
+.bluecross,
+.cigna,
+.medicaid {
+    margin: 5px 0;
+    display: none;
+}
+
+.row.active .aetna,
+.row.active .uhc,
+.row.active .bluecross,
+.row.active .cigna,
+.row.active .medicaid {
+    display: block;
+}
+
+.calculator h3 {
+    margin: 0;
+}
+
+.calculator .row {
+    margin-bottom: 15px;
+    flex-basis: 30%;
+}
+
+.calculator .row.total {
+    display: none;
+    background-color: #CCC;
+    padding: 10px;
+    flex-basis: 100%;
+}
+
+.calculator .row.total.active {
+    display: block;
+}
+
+/**
+* The JS will toggle the cheapest class on the lowest total
+* These styles make it stand out
+*/
+.cheapest {
+    font-weight: bold;
+    color: rgba(24, 100, 24, 1);
+    font-size: 1.3em;
+}
+
+/**
+* The cheapest class uses font awesome to add a check mark
+*/
+.cheapest::after {
+    font-family: FontAwesome;
+    content: '\f00c';
+    margin-left: 5px;
+}
+
+/*********************************************************************
+  YOUR TABLET/DESKTOP STYLES GO HERE
+*********************************************************************/
+@media(min-width: 681px) {
+
+    /* Any adjustments for tablets and larger go here.
+    Note these styles will be applied to anything 681px or larger -- so tablet AND desktop */
+    .calculator {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+}
+
+/*********************************************************************
+  YOUR DESKTOP-ONLY STYLES GO HERE
+*********************************************************************/
+@media(min-width: 729px) {
+    /* Any adjustments for desktop and larger go here.
+    Note these styles will be applied to anything 729px or larger -- so desktop */
+}

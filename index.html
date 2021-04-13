@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <!-- set the character set -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- first step to a responsive site -->
+    <title>HTML Skeleton</title>
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+    <!-- Your styles should be called here -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      	  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      	  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      	<![endif]-->
+  </head>
+
+  <body>
+    <!-- YOUR CONTENT GOES HERE -->
+    <div class="container">
+      <h1>Is Medicaid Really the Highest-Paying Insurance Company for Mental Health Services?</h1>
+      <p class="byline">By Renee Onque | April 13, 2021</p>
+    </div>
+    <div class="container image">
+      <img src="img/medicaid.jpeg">
+    </div>
+    <div class="container">
+      <p>Mental health has become a major focal point for American citizens following the pandemic. According to Mental Health America, there was a 93 percent increase in people who were screened for anxiety and a 62 percent increase in people who
+        were screened for depression since 2019.</p>
+
+      <p>Yet, receiving mental health support through psychotherapy is not cheap, especially if your insurance isn&rsquo;t great. Private insurance companies provide different rates for therapy depending on how much coverage a person has. The more
+        benefits you have, the more the insurance company is willing to pay.</p>
+
+      <p>Public assistance programs like Medicaid are insurance companies specifically for low-income U.S. citizens. Medicaid is cited as &ldquo;the single largest payer for mental health services in the United States,&rdquo; on their website, but is
+        this really true?</p>
+
+      <p>Click below to compare private insurance companies&rsquo; copays for outpatient therapy to Medicaid&rsquo;s copay for therapy sessions.</p>
+    </div>
+    <div class="calc-container">
+      <div class="container">
+        <h2>Comparing Private Insurance Companies' Copays for Therapy to Medicaid's</h2>
+        <p><i>Please keep in mind that location and the therapist&rsquo;s license and specialty also impact the cost of therapy sessions. The prices listed below are the average copay amounts for therapy sessions that are in-network and are between
+            45
+            and
+            60 minutes. If the session was $100 and in-network, this is how much the copay would be for each session.</i></p>
+        <p><b>Select the same amount of sessions for two or more of the insurance companies to compare the price.</b></p>
+        <div class="calculator">
+          <div class="row">
+            <div class="item">
+              <h3>Aetna</h3>
+              <img src="img/aetna.jpeg" />
+              <div class="qty_container">
+                <div>
+                  <input type="number" name="qty" value="0" />
+                </div>
+                <div class="unit">
+                  sessions
+                </div>
+              </div>
+            </div>
+            <div class="aetna" data-price="15" <strong>Aetna</strong>: $<span></span></div>
+          </div>
+          <div class="row">
+            <div class="item">
+              <h3>United Healthcare</h3>
+              <img src="img/uhc.png" />
+              <div class="qty_container">
+                <div>
+                  <input type="number" name="qty" value="0" />
+                </div>
+                <div class="unit">
+                  sessions
+                </div>
+              </div>
+            </div>
+            <div class="uhc" data-price="25" <strong>United Healthcare</strong>: $<span></span></div>
+          </div>
+          <div class="row">
+            <div class="item">
+              <h3>Blue Cross Blue Shield</h3>
+              <img src="img/bluecross.png" />
+              <div class="qty_container">
+                <div>
+                  <input type="number" name="qty" value="0" />
+                </div>
+                <div class="unit">
+                  sessions
+                </div>
+              </div>
+            </div>
+            <div class="bluecross" data-price="30" <strong>Blue Cross Blue Shield</strong>: $<span></span></div>
+          </div>
+          <div class="row">
+            <div class="item">
+              <h3>Cigna</h3>
+              <img src="img/cigna.png" />
+              <div class="qty_container">
+                <div>
+                  <input type="number" name="qty" value="0" />
+                </div>
+                <div class="unit">
+                  sessions
+                </div>
+              </div>
+            </div>
+            <div class="cigna" data-price="20" <strong>Cigna</strong>: $<span></span></div>
+          </div>
+          <div class="row">
+            <div class="item">
+              <h3>Medicaid</h3>
+              <img src="img/medicaid2.jpeg" />
+              <div class="qty_container">
+                <div>
+                  <input type="number" name="qty" value="0" />
+                </div>
+                <div class="unit">
+                  sessions
+                </div>
+              </div>
+            </div>
+            <div class="medicaid" data-price="4" <strong>Medicaid</strong>: $<span></span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Your javascript should be called here -->
+    <script src="main.js"></script>
+  </body>
+
+</html>
