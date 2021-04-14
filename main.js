@@ -139,23 +139,23 @@ function calculate_totals() {
 	/**
 	 * Now let's use conditionals to determine which shop cost least
 	 */
-	if (aetna < uhc && bluecross && cigna < medicaid) { // if amazon's cost is less than both peapod and freshdirect, amazon is cheapest
+	if (aetna < uhc && aetna < bluecross && aetna < cigna && aetna < medicaid) { // if amazon's cost is less than both peapod and freshdirect, amazon is cheapest
 		cheapest = 'aetna';
 	}
 
-	if (uhc < aetna && bluecross && cigna < medicaid) { // if amazon's cost is less than both peapod and freshdirect, amazon is cheapest
+	if (uhc < aetna && uhc < bluecross && uhc < cigna && uhc < medicaid) { // if amazon's cost is less than both peapod and freshdirect, amazon is cheapest
 		cheapest = 'uhc';
 	}
 
-	if (bluecross < uhc && aetna && cigna < medicaid) { // if amazon's cost is less than both peapod and freshdirect, amazon is cheapest
+	if (bluecross < uhc && bluecross < aetna && bluecross < cigna && bluecross < medicaid) { // if amazon's cost is less than both peapod and freshdirect, amazon is cheapest
 		cheapest = 'bluecross';
 	}
 
-	if (cigna < uhc && bluecross && aetna < medicaid) { // if amazon's cost is less than both peapod and freshdirect, amazon is cheapest
+	if (cigna < uhc && cigna < bluecross && cigna < aetna && cigna < medicaid) { // if amazon's cost is less than both peapod and freshdirect, amazon is cheapest
 		cheapest = 'cigna';
 	}
 
-	if (medicaid < uhc && bluecross && cigna < aetna) { // if amazon's cost is less than both peapod and freshdirect, amazon is cheapest
+	if (medicaid < uhc && medicaid < bluecross && medicaid < cigna && medicaid < aetna) { // if amazon's cost is less than both peapod and freshdirect, amazon is cheapest
 		cheapest = 'medicaid';
 	}
 
